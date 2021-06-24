@@ -1,0 +1,125 @@
+site_name: راهنمای مطالعه LPIC-1
+site_url: https://linuxmotto.ir/lpic1/
+use_directory_urls: false
+extra_css:
+  - stylesheets/vazirFont.css
+theme:
+  name: 'material'
+  language: fa
+  logo: 'files/favicon.ico'
+  copyright: 'تمامی محتویات این کتاب تحت مجوز Creative Commons by-nc ارائه می گردد'
+  use_directory_urls: true
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+#    - toc.integrate
+  font: 
+    text: Vazir
+    code: Roboto Mono
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        changelog/insiders.md: insiders/changelog.md
+        extensions/admonition.md: reference/admonitions.md
+        extensions/codehilite.md: reference/code-blocks.md
+        extensions/footnotes.md: reference/footnotes.md
+        extensions/metadata.md: reference/meta-tags.md
+        extensions/permalinks.md: setup/setting-up-navigation.md #permalink
+        extensions/pymdown.md: reference/admonitions.md
+        plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
+        plugins/search.md: setup/setting-up-site-search.md
+        releases/4.md: upgrading.md #upgrading-from-4x-to-5x
+        releases/5.md: upgrading.md #upgrading-from-3x-to-4x
+        releases/changelog.md: changelog.md
+        setup/adding-social-links.md: setup/setting-up-the-footer.md
+        sponsorship.md: insiders/index.md
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+
+nav:
+  - 'روی جلد': 'index.md'
+  - 'درباره ما': 'about.md'
+  - 'شروع به خواندن کنید':
+    - '۱ کامپیوترها ، نرم افزارها و  سیستم عامل ها':
+      - '۱.۱ کامپیوتر چیست؟': 'chapters/000/000_1_Computers_Software_and_Operating_Systems.html.md'
+      - '۱.۲ بخش‌های مختلف یک کامپیوتر': 'chapters/000/000_2_Computers_Software_and_Operating_Systems.html.md'
+      - '۱.۳ نرم افزار': 'chapters/000/000_3_Computers_Software_and_Operating_Systems.html.md'
+      - '۱.۴ سیستم عامل‌های مهم': 'chapters/000/000_4_Computers_Software_and_Operating_Systems.html.md'
+    - '۲ لینوکس و نرم افزار آزاد':
+      - '۲.۱ لینوکس: داستان یک موفقیت': 'chapters/002/002_1_linux_and_free_software.html.md'
+      - '۲.۲ آزاد یا متن باز': 'chapters/002/002_2_linux_and_free_software.html.md'
+      - '۲.۳ نرم افزارهای آزاد مهم': 'chapters/002/002_3_linux_and_free_software.html.md'
+      - '۲.۴ نرم افزارهای آزاد مهم': 'chapters/002/002_4_linux_and_free_software.html.md'
+    - '۳ معماری سیستم':
+      - '۳.۱ استخراج و پیکربندی تنظیمات سخت افزار': 'chapters/101/101_1_System_Architecture.html.md'
+      - '۳.۲ روند بوت سیستم': 'chapters/101/101_2_System_Architecture.html.md'
+      - '۳.۳ مدیریت Runlevelها و shutdown و reboot': 'chapters/101/101_3_System_Architecture.html.md'
+    - '۴ نصب لینوکس و مدیریت بسته ها':
+      - '۴.۱ طراحی ساختار دیسک': 'chapters/102/102_1_Linux_Installation_and_Package_Management.html.md'
+      - '۴.۲ نصب یک مدیر بوت': 'chapters/102/102_2_Linux_Installation_and_Package_Management.html.md'
+      - '۴.۳ مدیریت Share library ها': 'chapters/102/102_3_Linux_Installation_and_Package_Management.html.md'
+      - '۴.۴ مدیریت بسته‌های نرم افزاری در دبیان': 'chapters/102/102_4_Linux_Installation_and_Package_Management.html.md'
+      - '۴.۵ استفاده از RPM و YUM': 'chapters/102/102_5_Linux_Installation_and_Package_Management.html.md'
+    - '۵ دستورات گنو و یونیکس':
+      - '۵.۱ کار با خط فرمان': 'chapters/103/103_1_GNU_and_Unix_Commands.html.md'
+      - '۵.۲ پردازش جریان‌های داده باکمک فیلتر ها': 'chapters/103/103_2_GNU_and_Unix_Commands.html.md'
+      - '۵.۳ مدیریت فایل‌ها - مقدماتی': 'chapters/103/103_3_GNU_and_Unix_Commands.html.md'
+      - '۵.۴ استفاده از stream‌ها, pipe‌ها و redirect': 'chapters/103/103_4_GNU_and_Unix_Commands.html.md'
+      - '۵.۵ ایجاد، رصد و حذف یک فرایند': 'chapters/103/103_5_GNU_and_Unix_Commands.html.md'
+      - '۵.۶ ویرایش اولویت اجرای فرایندها': 'chapters/103/103_6_GNU_and_Unix_Commands.html.md'
+      - '۵.۷ جستجوی فایل‌های متنی توسط regular expressionها': 'chapters/103/103_7_GNU_and_Unix_Commands.html.md'
+      - '۵.۸ ویرایش فایل با کمک vi': 'chapters/103/103_8_GNU_and_Unix_Commands.html.md'
+    - '۶ تجهیزات، فایل سیستم های لینوکسی و فایل سیستم سلسله مراتبی':
+      - '۶.۱ ساخت پارتیشن و فایل سیستم': 'chapters/104/104_1_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۲ نگهداری از یکپارچگی فایل سیستم': 'chapters/104/104_2_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۳ کنترل mount و unmount شدن فایل سیستم': 'chapters/104/104_3_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۴ سهمیه بندی فضای دیسک یا quota': 'chapters/104/104_4_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۵ مدیریت مجوزهاو مالکیت‌ فایل': 'chapters/104/104_5_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۶ ساخت و تغییر hard و symbolic link': 'chapters/104/104_6_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+      - '۶.۷ جستجوی فایل سیستم و محل درست فایل‌ها': 'chapters/104/104_7_Devices_Linux_Filesystems_Filesystem_Hierarchy_Standard.html.md'
+
