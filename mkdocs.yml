@@ -1,5 +1,9 @@
 site_name: راهنمای مطالعه LPIC-1
 site_url: https://linuxmotto.ir/lpic1/
+site_author: Behrad Eslamifar
+copyright: GPL
+repo_name: behradeslamifar/lpic1-book
+repo_url: https://github.com/behradeslamifar/lpic1-book
 use_directory_urls: false
 extra_css:
   - stylesheets/vazirFont.css
@@ -7,6 +11,7 @@ theme:
   name: 'material'
   language: fa
   logo: 'files/favicon.ico'
+  favicon: 'files/favicon.ico'
   copyright: 'تمامی محتویات این کتاب تحت مجوز Creative Commons by-nc ارائه می گردد'
   use_directory_urls: true
   features:
