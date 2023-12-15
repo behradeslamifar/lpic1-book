@@ -1,5 +1,5 @@
 # LPIC-1 Book
-This book online at [linuxmotto](https://linuxmotto.ir/lpic1/).  
+This book online at [linuxmotto](https://linuxmotto.io/lpic1/).  
 This Document build by
 * [MkDocs](https://www.mkdocs.org/)
 * [Materal for MkDocs](https://squidfunk.github.io/mkdocs-material/)
